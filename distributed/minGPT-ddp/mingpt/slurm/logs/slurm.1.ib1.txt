@@ -1,0 +1,178 @@
+ibstatus: Infiniband device 'mlx5_0' port 1 status:
+	default gid:	 fe80:0000:0000:0000:0ac0:ebff:fefe:8e14
+	base lid:	 0x0
+	sm lid:		 0x0
+	state:		 4: ACTIVE
+	phys state:	 5: LinkUp
+	rate:		 100 Gb/sec (4X EDR)
+	link_layer:	 Ethernet
+
+Infiniband device 'mlx5_1' port 1 status:
+	default gid:	 fe80:0000:0000:0000:946d:ae03:00fc:e52c
+	base lid:	 0x6
+	sm lid:		 0x6
+	state:		 4: ACTIVE
+	phys state:	 5: LinkUp
+	rate:		 200 Gb/sec (4X HDR)
+	link_layer:	 InfiniBand
+
+Infiniband device 'mlx5_2' port 1 status:
+	default gid:	 fe80:0000:0000:0000:0ac0:ebff:fefe:f070
+	base lid:	 0x0
+	sm lid:		 0x0
+	state:		 1: DOWN
+	phys state:	 3: Disabled
+	rate:		 100 Gb/sec (4X EDR)
+	link_layer:	 Ethernet
+
+Infiniband device 'mlx5_3' port 1 status:
+	default gid:	 fe80:0000:0000:0000:946d:ae03:00d5:383e
+	base lid:	 0x5
+	sm lid:		 0x6
+	state:		 4: ACTIVE
+	phys state:	 5: LinkUp
+	rate:		 200 Gb/sec (4X HDR)
+	link_layer:	 InfiniBand
+ibdev2netdev: mlx5_0 port 1 ==> ens13np0 (Up)
+mlx5_1 port 1 ==> ib0 (Up)
+mlx5_2 port 1 ==> ens17np0 (Down)
+mlx5_3 port 1 ==> ib1 (Up)
+rdma device: link mlx5_0/1 state ACTIVE physical_state LINK_UP netdev ens13np0 
+link mlx5_1/1 subnet_prefix fe80:0000:0000:0000 lid 6 sm_lid 6 lmc 0 state ACTIVE physical_state LINK_UP 
+link mlx5_2/1 state DOWN physical_state DISABLED netdev ens17np0 
+link mlx5_3/1 subnet_prefix fe80:0000:0000:0000 lid 5 sm_lid 6 lmc 0 state ACTIVE physical_state LINK_UP 
+MASTER_ADDR: pgpu25
+MASTER_PORT: 46499
+environment: NCCL_IB_DISABLE=1
+NCCL_TOPO_DUMP_FILE=1.ib1.topo.xml
+NCCL_DEBUG=INFO
+NCCL_SOCKET_IFNAME=ib1
+0: I0628 09:36:06.072000 23456247955968 torch/distributed/launcher/api.py:188] Starting elastic_operator with launch configs:
+0: I0628 09:36:06.072000 23456247955968 torch/distributed/launcher/api.py:188]   entrypoint       : ../main.py
+0: I0628 09:36:06.072000 23456247955968 torch/distributed/launcher/api.py:188]   min_nodes        : 2
+0: I0628 09:36:06.072000 23456247955968 torch/distributed/launcher/api.py:188]   max_nodes        : 2
+0: I0628 09:36:06.072000 23456247955968 torch/distributed/launcher/api.py:188]   nproc_per_node   : 1
+0: I0628 09:36:06.072000 23456247955968 torch/distributed/launcher/api.py:188]   run_id           : 28278
+0: I0628 09:36:06.072000 23456247955968 torch/distributed/launcher/api.py:188]   rdzv_backend     : c10d
+0: I0628 09:36:06.072000 23456247955968 torch/distributed/launcher/api.py:188]   rdzv_endpoint    : pgpu25:46499
+0: I0628 09:36:06.072000 23456247955968 torch/distributed/launcher/api.py:188]   rdzv_configs     : {'timeout': 900}
+1: I0628 09:36:06.074000 23456247955968 torch/distributed/launcher/api.py:188] Starting elastic_operator with launch configs:
+1: I0628 09:36:06.074000 23456247955968 torch/distributed/launcher/api.py:188]   entrypoint       : ../main.py
+1: I0628 09:36:06.074000 23456247955968 torch/distributed/launcher/api.py:188]   min_nodes        : 2
+1: I0628 09:36:06.074000 23456247955968 torch/distributed/launcher/api.py:188]   max_nodes        : 2
+1: I0628 09:36:06.074000 23456247955968 torch/distributed/launcher/api.py:188]   nproc_per_node   : 1
+1: I0628 09:36:06.074000 23456247955968 torch/distributed/launcher/api.py:188]   run_id           : 28278
+1: I0628 09:36:06.074000 23456247955968 torch/distributed/launcher/api.py:188]   rdzv_backend     : c10d
+1: I0628 09:36:06.074000 23456247955968 torch/distributed/launcher/api.py:188]   rdzv_endpoint    : pgpu25:46499
+1: I0628 09:36:06.074000 23456247955968 torch/distributed/launcher/api.py:188]   rdzv_configs     : {'timeout': 900}
+0: I0628 09:36:06.072000 23456247955968 torch/distributed/launcher/api.py:188]   max_restarts     : 0
+0: I0628 09:36:06.072000 23456247955968 torch/distributed/launcher/api.py:188]   monitor_interval : 5
+0: I0628 09:36:06.072000 23456247955968 torch/distributed/launcher/api.py:188]   log_dir          : /tmp/torchelastic_6nlfdl4p
+0: I0628 09:36:06.072000 23456247955968 torch/distributed/launcher/api.py:188]   metrics_cfg      : {}
+0: I0628 09:36:06.072000 23456247955968 torch/distributed/launcher/api.py:188] 
+0: I0628 09:36:06.077000 23456247955968 torch/distributed/elastic/agent/server/api.py:866] [default] starting workers for entrypoint: python
+0: I0628 09:36:06.077000 23456247955968 torch/distributed/elastic/agent/server/api.py:699] [default] Rendezvous'ing worker group
+1: I0628 09:36:06.074000 23456247955968 torch/distributed/launcher/api.py:188]   max_restarts     : 0
+1: I0628 09:36:06.074000 23456247955968 torch/distributed/launcher/api.py:188]   monitor_interval : 5
+1: I0628 09:36:06.074000 23456247955968 torch/distributed/launcher/api.py:188]   log_dir          : /tmp/torchelastic__29z1jxu
+1: I0628 09:36:06.074000 23456247955968 torch/distributed/launcher/api.py:188]   metrics_cfg      : {}
+1: I0628 09:36:06.074000 23456247955968 torch/distributed/launcher/api.py:188] 
+1: I0628 09:36:06.079000 23456247955968 torch/distributed/elastic/agent/server/api.py:866] [default] starting workers for entrypoint: python
+1: I0628 09:36:06.079000 23456247955968 torch/distributed/elastic/agent/server/api.py:699] [default] Rendezvous'ing worker group
+0: I0628 09:36:07.120000 23456247955968 torch/distributed/elastic/agent/server/api.py:568] [default] Rendezvous complete for workers. Result:
+0: I0628 09:36:07.120000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   restart_count=0
+0: I0628 09:36:07.120000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   master_addr=pgpu25.cm.cluster
+0: I0628 09:36:07.120000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   master_port=40753
+0: I0628 09:36:07.120000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   group_rank=0
+0: I0628 09:36:07.120000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   group_world_size=2
+0: I0628 09:36:07.120000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   local_ranks=[0]
+0: I0628 09:36:07.120000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   role_ranks=[0]
+0: I0628 09:36:07.120000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   global_ranks=[0]
+0: I0628 09:36:07.120000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   role_world_sizes=[2]
+0: I0628 09:36:07.120000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   global_world_sizes=[2]
+0: I0628 09:36:07.120000 23456247955968 torch/distributed/elastic/agent/server/api.py:568] 
+0: I0628 09:36:07.120000 23456247955968 torch/distributed/elastic/agent/server/api.py:707] [default] Starting worker group
+1: I0628 09:36:07.120000 23456247955968 torch/distributed/elastic/agent/server/api.py:568] [default] Rendezvous complete for workers. Result:
+1: I0628 09:36:07.120000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   restart_count=0
+1: I0628 09:36:07.120000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   master_addr=pgpu25.cm.cluster
+1: I0628 09:36:07.120000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   master_port=40753
+1: I0628 09:36:07.120000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   group_rank=1
+1: I0628 09:36:07.120000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   group_world_size=2
+1: I0628 09:36:07.120000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   local_ranks=[0]
+1: I0628 09:36:07.120000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   role_ranks=[1]
+1: I0628 09:36:07.120000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   global_ranks=[1]
+0: I0628 09:36:07.121000 23456247955968 torch/distributed/elastic/agent/server/local_elastic_agent.py:168] Environment variable 'TORCHELASTIC_ENABLE_FILE_TIMER' not found. Do not start FileTimerServer.
+1: I0628 09:36:07.120000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   role_world_sizes=[2]
+1: I0628 09:36:07.120000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   global_world_sizes=[2]
+1: I0628 09:36:07.120000 23456247955968 torch/distributed/elastic/agent/server/api.py:568] 
+1: I0628 09:36:07.121000 23456247955968 torch/distributed/elastic/agent/server/api.py:707] [default] Starting worker group
+0: I0628 09:36:07.121000 23456247955968 torch/distributed/elastic/multiprocessing/api.py:263] log directory set to: /tmp/torchelastic_6nlfdl4p/28278__ycl06h2
+1: I0628 09:36:07.121000 23456247955968 torch/distributed/elastic/agent/server/local_elastic_agent.py:168] Environment variable 'TORCHELASTIC_ENABLE_FILE_TIMER' not found. Do not start FileTimerServer.
+0: I0628 09:36:07.121000 23456247955968 torch/distributed/elastic/multiprocessing/api.py:358] Setting worker0 reply file to: /tmp/torchelastic_6nlfdl4p/28278__ycl06h2/attempt_0/0/error.json
+1: I0628 09:36:07.121000 23456247955968 torch/distributed/elastic/multiprocessing/api.py:263] log directory set to: /tmp/torchelastic__29z1jxu/28278_7lsugrbo
+1: I0628 09:36:07.121000 23456247955968 torch/distributed/elastic/multiprocessing/api.py:358] Setting worker0 reply file to: /tmp/torchelastic__29z1jxu/28278_7lsugrbo/attempt_0/0/error.json
+0: Data has 55769 characters, 59 unique.
+1: Data has 55769 characters, 59 unique.
+0: number of parameters: 27.32M
+1: number of parameters: 27.32M
+0: Snapshot not found. Training model from scratch
+0: pgpu25:2978523:2978523 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to ib1
+0: pgpu25:2978523:2978523 [0] NCCL INFO Bootstrap : Using ib1:20.20.20.25<0>
+0: pgpu25:2978523:2978523 [0] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+0: pgpu25:2978523:2978523 [0] NCCL INFO cudaDriverVersion 12000
+0: NCCL version 2.20.5+cuda12.1
+0: pgpu25:2978523:2978547 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 1.
+0: pgpu25:2978523:2978547 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to ib1
+0: pgpu25:2978523:2978547 [0] NCCL INFO NET/Socket : Using [0]ib1:20.20.20.25<0>
+0: pgpu25:2978523:2978547 [0] NCCL INFO Using non-device net plugin version 0
+0: pgpu25:2978523:2978547 [0] NCCL INFO Using network Socket
+1: Snapshot not found. Training model from scratch
+1: pgpu27:2312570:2312570 [0] NCCL INFO cudaDriverVersion 12000
+1: pgpu27:2312570:2312570 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to ib1
+1: pgpu27:2312570:2312570 [0] NCCL INFO Bootstrap : Using ib1:20.20.20.27<0>
+1: pgpu27:2312570:2312570 [0] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+1: pgpu27:2312570:2312598 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 1.
+1: pgpu27:2312570:2312598 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to ib1
+1: pgpu27:2312570:2312598 [0] NCCL INFO NET/Socket : Using [0]ib1:20.20.20.27<0>
+1: pgpu27:2312570:2312598 [0] NCCL INFO Using non-device net plugin version 0
+1: pgpu27:2312570:2312598 [0] NCCL INFO Using network Socket
+0: pgpu25:2978523:2978547 [0] NCCL INFO comm 0x124329a0 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 63000 commId 0xde866016c1b2039d - Init START
+1: pgpu27:2312570:2312598 [0] NCCL INFO comm 0x12210c60 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 25000 commId 0xde866016c1b2039d - Init START
+1: pgpu27:2312570:2312598 [0] NCCL INFO Setting affinity for GPU 0 to 01c00000,00000000,00000000,00000000,01c00000
+0: pgpu25:2978523:2978547 [0] NCCL INFO NCCL_TOPO_DUMP_FILE set by environment to 1.ib1.topo.xml
+0: pgpu25:2978523:2978547 [0] NCCL INFO Setting affinity for GPU 0 to 3f
+0: pgpu25:2978523:2978547 [0] NCCL INFO comm 0x124329a0 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0
+0: pgpu25:2978523:2978547 [0] NCCL INFO Channel 00/02 :    0   1
+0: pgpu25:2978523:2978547 [0] NCCL INFO Channel 01/02 :    0   1
+0: pgpu25:2978523:2978547 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] -1/-1/-1->0->1
+0: pgpu25:2978523:2978547 [0] NCCL INFO P2P Chunksize set to 131072
+1: pgpu27:2312570:2312598 [0] NCCL INFO comm 0x12210c60 rank 1 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0
+1: pgpu27:2312570:2312598 [0] NCCL INFO Trees [0] -1/-1/-1->1->0 [1] 0/-1/-1->1->-1
+1: pgpu27:2312570:2312598 [0] NCCL INFO P2P Chunksize set to 131072
+0: pgpu25:2978523:2978547 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [receive] via NET/Socket/0
+0: pgpu25:2978523:2978547 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [receive] via NET/Socket/0
+0: pgpu25:2978523:2978547 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [send] via NET/Socket/0
+0: pgpu25:2978523:2978547 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [send] via NET/Socket/0
+1: pgpu27:2312570:2312598 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [receive] via NET/Socket/0
+1: pgpu27:2312570:2312598 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [receive] via NET/Socket/0
+1: pgpu27:2312570:2312598 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [send] via NET/Socket/0
+1: pgpu27:2312570:2312598 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [send] via NET/Socket/0
+0: pgpu25:2978523:2978547 [0] NCCL INFO Connected all rings
+0: pgpu25:2978523:2978547 [0] NCCL INFO Connected all trees
+1: pgpu27:2312570:2312598 [0] NCCL INFO Connected all rings
+1: pgpu27:2312570:2312598 [0] NCCL INFO Connected all trees
+0: pgpu25:2978523:2978547 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+0: pgpu25:2978523:2978547 [0] NCCL INFO 2 coll channels, 0 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+1: pgpu27:2312570:2312598 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+1: pgpu27:2312570:2312598 [0] NCCL INFO 2 coll channels, 0 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+1: pgpu27:2312570:2312598 [0] NCCL INFO comm 0x12210c60 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 25000 commId 0xde866016c1b2039d - Init COMPLETE
+0: pgpu25:2978523:2978547 [0] NCCL INFO comm 0x124329a0 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 63000 commId 0xde866016c1b2039d - Init COMPLETE
+0: [GPU0] Epoch 1 | Iter 0 | Train Loss 4.20646
+1: [GPU1] Epoch 1 | Iter 0 | Train Loss 4.20932
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 166455 ON pgpu25 CANCELLED AT 2024-06-28T09:36:23 ***
+0: slurmstepd: error: *** STEP 166455.0 ON pgpu25 CANCELLED AT 2024-06-28T09:36:23 ***
+1: W0628 09:36:23.991000 23456247955968 torch/distributed/elastic/agent/server/api.py:741] Received 15 death signal, shutting down workers
+1: W0628 09:36:23.991000 23456247955968 torch/distributed/elastic/multiprocessing/api.py:851] Sending process 2312570 closing signal SIGTERM
+0: W0628 09:36:23.991000 23456247955968 torch/distributed/elastic/agent/server/api.py:741] Received 15 death signal, shutting down workers
+0: W0628 09:36:23.992000 23456247955968 torch/distributed/elastic/multiprocessing/api.py:851] Sending process 2978523 closing signal SIGTERM
