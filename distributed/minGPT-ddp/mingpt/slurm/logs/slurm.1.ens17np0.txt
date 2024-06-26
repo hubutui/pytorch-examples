@@ -1,0 +1,277 @@
+ibstatus: Infiniband device 'mlx5_0' port 1 status:
+	default gid:	 fe80:0000:0000:0000:0ac0:ebff:fefe:8e14
+	base lid:	 0x0
+	sm lid:		 0x0
+	state:		 4: ACTIVE
+	phys state:	 5: LinkUp
+	rate:		 100 Gb/sec (4X EDR)
+	link_layer:	 Ethernet
+
+Infiniband device 'mlx5_1' port 1 status:
+	default gid:	 fe80:0000:0000:0000:946d:ae03:00fc:e52c
+	base lid:	 0x6
+	sm lid:		 0x6
+	state:		 4: ACTIVE
+	phys state:	 5: LinkUp
+	rate:		 200 Gb/sec (4X HDR)
+	link_layer:	 InfiniBand
+
+Infiniband device 'mlx5_2' port 1 status:
+	default gid:	 fe80:0000:0000:0000:0ac0:ebff:fefe:f070
+	base lid:	 0x0
+	sm lid:		 0x0
+	state:		 1: DOWN
+	phys state:	 3: Disabled
+	rate:		 100 Gb/sec (4X EDR)
+	link_layer:	 Ethernet
+
+Infiniband device 'mlx5_3' port 1 status:
+	default gid:	 fe80:0000:0000:0000:946d:ae03:00d5:383e
+	base lid:	 0x5
+	sm lid:		 0x6
+	state:		 4: ACTIVE
+	phys state:	 5: LinkUp
+	rate:		 200 Gb/sec (4X HDR)
+	link_layer:	 InfiniBand
+ibdev2netdev: mlx5_0 port 1 ==> ens13np0 (Up)
+mlx5_1 port 1 ==> ib0 (Up)
+mlx5_2 port 1 ==> ens17np0 (Down)
+mlx5_3 port 1 ==> ib1 (Up)
+rdma device: link mlx5_0/1 state ACTIVE physical_state LINK_UP netdev ens13np0 
+link mlx5_1/1 subnet_prefix fe80:0000:0000:0000 lid 6 sm_lid 6 lmc 0 state ACTIVE physical_state LINK_UP 
+link mlx5_2/1 state DOWN physical_state DISABLED netdev ens17np0 
+link mlx5_3/1 subnet_prefix fe80:0000:0000:0000 lid 5 sm_lid 6 lmc 0 state ACTIVE physical_state LINK_UP 
+MASTER_ADDR: pgpu25
+MASTER_PORT: 31859
+environment: NCCL_IB_DISABLE=1
+NCCL_TOPO_DUMP_FILE=1.ens17np0.topo.xml
+NCCL_DEBUG=INFO
+NCCL_SOCKET_IFNAME=ens17np0
+0: I0628 09:34:11.612000 23456247955968 torch/distributed/launcher/api.py:188] Starting elastic_operator with launch configs:
+0: I0628 09:34:11.612000 23456247955968 torch/distributed/launcher/api.py:188]   entrypoint       : ../main.py
+0: I0628 09:34:11.612000 23456247955968 torch/distributed/launcher/api.py:188]   min_nodes        : 2
+0: I0628 09:34:11.612000 23456247955968 torch/distributed/launcher/api.py:188]   max_nodes        : 2
+0: I0628 09:34:11.612000 23456247955968 torch/distributed/launcher/api.py:188]   nproc_per_node   : 1
+0: I0628 09:34:11.612000 23456247955968 torch/distributed/launcher/api.py:188]   run_id           : 11710
+0: I0628 09:34:11.612000 23456247955968 torch/distributed/launcher/api.py:188]   rdzv_backend     : c10d
+0: I0628 09:34:11.612000 23456247955968 torch/distributed/launcher/api.py:188]   rdzv_endpoint    : pgpu25:31859
+0: I0628 09:34:11.612000 23456247955968 torch/distributed/launcher/api.py:188]   rdzv_configs     : {'timeout': 900}
+1: I0628 09:34:11.623000 23456247955968 torch/distributed/launcher/api.py:188] Starting elastic_operator with launch configs:
+1: I0628 09:34:11.623000 23456247955968 torch/distributed/launcher/api.py:188]   entrypoint       : ../main.py
+1: I0628 09:34:11.623000 23456247955968 torch/distributed/launcher/api.py:188]   min_nodes        : 2
+1: I0628 09:34:11.623000 23456247955968 torch/distributed/launcher/api.py:188]   max_nodes        : 2
+1: I0628 09:34:11.623000 23456247955968 torch/distributed/launcher/api.py:188]   nproc_per_node   : 1
+1: I0628 09:34:11.623000 23456247955968 torch/distributed/launcher/api.py:188]   run_id           : 11710
+1: I0628 09:34:11.623000 23456247955968 torch/distributed/launcher/api.py:188]   rdzv_backend     : c10d
+1: I0628 09:34:11.623000 23456247955968 torch/distributed/launcher/api.py:188]   rdzv_endpoint    : pgpu25:31859
+1: I0628 09:34:11.623000 23456247955968 torch/distributed/launcher/api.py:188]   rdzv_configs     : {'timeout': 900}
+0: I0628 09:34:11.612000 23456247955968 torch/distributed/launcher/api.py:188]   max_restarts     : 0
+0: I0628 09:34:11.612000 23456247955968 torch/distributed/launcher/api.py:188]   monitor_interval : 5
+0: I0628 09:34:11.612000 23456247955968 torch/distributed/launcher/api.py:188]   log_dir          : /tmp/torchelastic_ht6a73oy
+0: I0628 09:34:11.612000 23456247955968 torch/distributed/launcher/api.py:188]   metrics_cfg      : {}
+0: I0628 09:34:11.612000 23456247955968 torch/distributed/launcher/api.py:188] 
+0: I0628 09:34:11.616000 23456247955968 torch/distributed/elastic/agent/server/api.py:866] [default] starting workers for entrypoint: python
+0: I0628 09:34:11.616000 23456247955968 torch/distributed/elastic/agent/server/api.py:699] [default] Rendezvous'ing worker group
+1: I0628 09:34:11.623000 23456247955968 torch/distributed/launcher/api.py:188]   max_restarts     : 0
+1: I0628 09:34:11.623000 23456247955968 torch/distributed/launcher/api.py:188]   monitor_interval : 5
+1: I0628 09:34:11.623000 23456247955968 torch/distributed/launcher/api.py:188]   log_dir          : /tmp/torchelastic_jvhgpmxu
+1: I0628 09:34:11.623000 23456247955968 torch/distributed/launcher/api.py:188]   metrics_cfg      : {}
+1: I0628 09:34:11.623000 23456247955968 torch/distributed/launcher/api.py:188] 
+1: I0628 09:34:11.627000 23456247955968 torch/distributed/elastic/agent/server/api.py:866] [default] starting workers for entrypoint: python
+1: I0628 09:34:11.627000 23456247955968 torch/distributed/elastic/agent/server/api.py:699] [default] Rendezvous'ing worker group
+0: I0628 09:34:12.783000 23456247955968 torch/distributed/elastic/agent/server/api.py:568] [default] Rendezvous complete for workers. Result:
+0: I0628 09:34:12.783000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   restart_count=0
+0: I0628 09:34:12.783000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   master_addr=pgpu25.cm.cluster
+0: I0628 09:34:12.783000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   master_port=41087
+0: I0628 09:34:12.783000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   group_rank=0
+0: I0628 09:34:12.783000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   group_world_size=2
+0: I0628 09:34:12.783000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   local_ranks=[0]
+0: I0628 09:34:12.783000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   role_ranks=[0]
+0: I0628 09:34:12.783000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   global_ranks=[0]
+0: I0628 09:34:12.783000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   role_world_sizes=[2]
+0: I0628 09:34:12.783000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   global_world_sizes=[2]
+0: I0628 09:34:12.783000 23456247955968 torch/distributed/elastic/agent/server/api.py:568] 
+0: I0628 09:34:12.783000 23456247955968 torch/distributed/elastic/agent/server/api.py:707] [default] Starting worker group
+1: I0628 09:34:12.783000 23456247955968 torch/distributed/elastic/agent/server/api.py:568] [default] Rendezvous complete for workers. Result:
+1: I0628 09:34:12.783000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   restart_count=0
+1: I0628 09:34:12.783000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   master_addr=pgpu25.cm.cluster
+1: I0628 09:34:12.783000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   master_port=41087
+1: I0628 09:34:12.783000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   group_rank=1
+1: I0628 09:34:12.783000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   group_world_size=2
+1: I0628 09:34:12.783000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   local_ranks=[0]
+1: I0628 09:34:12.783000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   role_ranks=[1]
+1: I0628 09:34:12.783000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   global_ranks=[1]
+0: I0628 09:34:12.783000 23456247955968 torch/distributed/elastic/agent/server/local_elastic_agent.py:168] Environment variable 'TORCHELASTIC_ENABLE_FILE_TIMER' not found. Do not start FileTimerServer.
+1: I0628 09:34:12.783000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   role_world_sizes=[2]
+1: I0628 09:34:12.783000 23456247955968 torch/distributed/elastic/agent/server/api.py:568]   global_world_sizes=[2]
+1: I0628 09:34:12.783000 23456247955968 torch/distributed/elastic/agent/server/api.py:568] 
+1: I0628 09:34:12.783000 23456247955968 torch/distributed/elastic/agent/server/api.py:707] [default] Starting worker group
+0: I0628 09:34:12.783000 23456247955968 torch/distributed/elastic/multiprocessing/api.py:263] log directory set to: /tmp/torchelastic_ht6a73oy/11710_2m26916z
+1: I0628 09:34:12.783000 23456247955968 torch/distributed/elastic/agent/server/local_elastic_agent.py:168] Environment variable 'TORCHELASTIC_ENABLE_FILE_TIMER' not found. Do not start FileTimerServer.
+1: I0628 09:34:12.783000 23456247955968 torch/distributed/elastic/multiprocessing/api.py:263] log directory set to: /tmp/torchelastic_jvhgpmxu/11710_8v_z9g1k
+0: I0628 09:34:12.783000 23456247955968 torch/distributed/elastic/multiprocessing/api.py:358] Setting worker0 reply file to: /tmp/torchelastic_ht6a73oy/11710_2m26916z/attempt_0/0/error.json
+1: I0628 09:34:12.784000 23456247955968 torch/distributed/elastic/multiprocessing/api.py:358] Setting worker0 reply file to: /tmp/torchelastic_jvhgpmxu/11710_8v_z9g1k/attempt_0/0/error.json
+0: Data has 55769 characters, 59 unique.
+1: Data has 55769 characters, 59 unique.
+0: number of parameters: 27.32M
+1: number of parameters: 27.32M
+0: Snapshot not found. Training model from scratch
+0: pgpu25:2976896:2976896 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to ens17np0
+0: 
+0: pgpu25:2976896:2976896 [0] bootstrap.cc:48 NCCL WARN Bootstrap : no socket interface found
+0: pgpu25:2976896:2976896 [0] NCCL INFO init.cc:84 -> 3
+0: pgpu25:2976896:2976896 [0] NCCL INFO init.cc:103 -> 3
+0: Error executing job with overrides: []
+0: Traceback (most recent call last):
+0:   File "/home/hubutui/pytorch-examples/distributed/minGPT-ddp/mingpt/slurm/../main.py", line 38, in main
+0:     trainer = Trainer(trainer_cfg, model, optimizer, train_data, test_data)
+0:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/hubutui/pytorch-examples/distributed/minGPT-ddp/mingpt/trainer.py", line 67, in __init__
+0:     self.model = DDP(self.model, device_ids=[self.local_rank])
+0:                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/hubutui/.conda/envs/huatuogpt/lib/python3.11/site-packages/torch/nn/parallel/distributed.py", line 798, in __init__
+0:     _verify_param_shape_across_processes(self.process_group, parameters)
+0:   File "/home/hubutui/.conda/envs/huatuogpt/lib/python3.11/site-packages/torch/distributed/utils.py", line 269, in _verify_param_shape_across_processes
+0:     return dist._verify_params_across_processes(process_group, tensors, logger)
+0:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0: torch.distributed.DistBackendError: NCCL error in: /opt/conda/conda-bld/pytorch_1712608853085/work/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1866, internal error - please report this issue to the NCCL developers, NCCL version 2.20.5
+0: ncclInternalError: Internal check failed.
+0: Last error:
+0: Bootstrap : no socket interface found
+0: 
+0: Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+1: Snapshot not found. Training model from scratch
+1: Error executing job with overrides: []
+1: Traceback (most recent call last):
+1:   File "/home/hubutui/pytorch-examples/distributed/minGPT-ddp/mingpt/slurm/../main.py", line 38, in main
+1:     trainer = Trainer(trainer_cfg, model, optimizer, train_data, test_data)
+1:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1:   File "/home/hubutui/pytorch-examples/distributed/minGPT-ddp/mingpt/trainer.py", line 67, in __init__
+1:     self.model = DDP(self.model, device_ids=[self.local_rank])
+1:                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1:   File "/home/hubutui/.conda/envs/huatuogpt/lib/python3.11/site-packages/torch/nn/parallel/distributed.py", line 798, in __init__
+1:     _verify_param_shape_across_processes(self.process_group, parameters)
+1:   File "/home/hubutui/.conda/envs/huatuogpt/lib/python3.11/site-packages/torch/distributed/utils.py", line 269, in _verify_param_shape_across_processes
+1:     return dist._verify_params_across_processes(process_group, tensors, logger)
+1:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1: torch.distributed.DistBackendError: [1] is setting up NCCL communicator and retrieving ncclUniqueId from [0] via c10d key-value store by key '0', but store->get('0') got error: Connection reset by peer
+1: Exception raised from recvBytes at /opt/conda/conda-bld/pytorch_1712608853085/work/torch/csrc/distributed/c10d/Utils.hpp:672 (most recent call first):
+1: frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x1554fcf41897 in /home/hubutui/.conda/envs/huatuogpt/lib/python3.11/site-packages/torch/lib/libc10.so)
+1: frame #1: <unknown function> + 0x57c6c1e (0x155543f59c1e in /home/hubutui/.conda/envs/huatuogpt/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #2: c10d::TCPStore::doWait(c10::ArrayRef<std::string>, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x2c7 (0x155543f54667 in /home/hubutui/.conda/envs/huatuogpt/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #3: c10d::TCPStore::doGet(std::string const&) + 0x32 (0x155543f54962 in /home/hubutui/.conda/envs/huatuogpt/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #4: c10d::TCPStore::get(std::string const&) + 0xa1 (0x155543f559b1 in /home/hubutui/.conda/envs/huatuogpt/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #5: c10d::PrefixStore::get(std::string const&) + 0x31 (0x155543f09d51 in /home/hubutui/.conda/envs/huatuogpt/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #6: c10d::PrefixStore::get(std::string const&) + 0x31 (0x155543f09d51 in /home/hubutui/.conda/envs/huatuogpt/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #7: c10d::PrefixStore::get(std::string const&) + 0x31 (0x155543f09d51 in /home/hubutui/.conda/envs/huatuogpt/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #8: c10d::ProcessGroupNCCL::broadcastUniqueNCCLID(ncclUniqueId*, bool, std::string const&, int) + 0xa9 (0x1554fe23b349 in /home/hubutui/.conda/envs/huatuogpt/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+1: frame #9: c10d::ProcessGroupNCCL::getNCCLComm(std::string const&, c10::Device&, c10d::OpType, int, bool) + 0xc50 (0x1554fe2427d0 in /home/hubutui/.conda/envs/huatuogpt/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+1: frame #10: c10d::ProcessGroupNCCL::allgather(std::vector<std::vector<at::Tensor, std::allocator<at::Tensor> >, std::allocator<std::vector<at::Tensor, std::allocator<at::Tensor> > > >&, std::vector<at::Tensor, std::allocator<at::Tensor> >&, c10d::AllgatherOptions const&) + 0x857 (0x1554fe254ef7 in /home/hubutui/.conda/envs/huatuogpt/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+1: frame #11: <unknown function> + 0x576abbd (0x155543efdbbd in /home/hubutui/.conda/envs/huatuogpt/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #12: <unknown function> + 0x5774882 (0x155543f07882 in /home/hubutui/.conda/envs/huatuogpt/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #13: <unknown function> + 0x4db0e26 (0x155543543e26 in /home/hubutui/.conda/envs/huatuogpt/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #14: <unknown function> + 0x175be98 (0x15553feeee98 in /home/hubutui/.conda/envs/huatuogpt/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #15: <unknown function> + 0x577c923 (0x155543f0f923 in /home/hubutui/.conda/envs/huatuogpt/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #16: <unknown function> + 0x578811f (0x155543f1b11f in /home/hubutui/.conda/envs/huatuogpt/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #17: c10d::verify_params_across_processes(c10::intrusive_ptr<c10d::ProcessGroup, c10::detail::intrusive_target_default_null_type<c10d::ProcessGroup> > const&, std::vector<at::Tensor, std::allocator<at::Tensor> > const&, std::optional<std::weak_ptr<c10d::Logger> > const&) + 0x26d (0x155543f81b8d in /home/hubutui/.conda/envs/huatuogpt/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+1: frame #18: <unknown function> + 0xce9c61 (0x15554be51c61 in /home/hubutui/.conda/envs/huatuogpt/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+1: frame #19: <unknown function> + 0x47ef94 (0x15554b5e6f94 in /home/hubutui/.conda/envs/huatuogpt/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+1: frame #20: /home/hubutui/.conda/envs/huatuogpt/bin/python() [0x528767]
+1: frame #21: _PyObject_MakeTpCall + 0x26c (0x5041ac in /home/hubutui/.conda/envs/huatuogpt/bin/python)
+1: frame #22: _PyEval_EvalFrameDefault + 0x6a7 (0x5116e7 in /home/hubutui/.conda/envs/huatuogpt/bin/python)
+1: frame #23: _PyFunction_Vectorcall + 0x173 (0x538cc3 in /home/hubutui/.conda/envs/huatuogpt/bin/python)
+1: frame #24: /home/hubutui/.conda/envs/huatuogpt/bin/python() [0x5400d2]
+1: frame #25: _PyObject_MakeTpCall + 0x233 (0x504173 in /home/hubutui/.conda/envs/huatuogpt/bin/python)
+1: frame #26: _PyEval_EvalFrameDefault + 0x6a7 (0x5116e7 in /home/hubutui/.conda/envs/huatuogpt/bin/python)
+1: frame #27: _PyFunction_Vectorcall + 0x173 (0x538cc3 in /home/hubutui/.conda/envs/huatuogpt/bin/python)
+1: frame #28: /home/hubutui/.conda/envs/huatuogpt/bin/python() [0x540022]
+1: frame #29: _PyObject_MakeTpCall + 0x233 (0x504173 in /home/hubutui/.conda/envs/huatuogpt/bin/python)
+1: frame #30: _PyEval_EvalFrameDefault + 0x6a7 (0x5116e7 in /home/hubutui/.conda/envs/huatuogpt/bin/python)
+1: frame #31: /home/hubutui/.conda/envs/huatuogpt/bin/python() [0x5cbeda]
+1: frame #32: PyEval_EvalCode + 0x9f (0x5cb5af in /home/hubutui/.conda/envs/huatuogpt/bin/python)
+1: frame #33: /home/hubutui/.conda/envs/huatuogpt/bin/python() [0x5ec6a7]
+1: frame #34: /home/hubutui/.conda/envs/huatuogpt/bin/python() [0x5e8240]
+1: frame #35: /home/hubutui/.conda/envs/huatuogpt/bin/python() [0x5fd192]
+1: frame #36: _PyRun_SimpleFileObject + 0x19f (0x5fc55f in /home/hubutui/.conda/envs/huatuogpt/bin/python)
+1: frame #37: _PyRun_AnyFileObject + 0x43 (0x5fc283 in /home/hubutui/.conda/envs/huatuogpt/bin/python)
+1: frame #38: Py_RunMain + 0x2ee (0x5f6efe in /home/hubutui/.conda/envs/huatuogpt/bin/python)
+1: frame #39: Py_BytesMain + 0x39 (0x5bbc79 in /home/hubutui/.conda/envs/huatuogpt/bin/python)
+1: frame #40: __libc_start_main + 0xf3 (0x1555545f1ca3 in /lib64/libc.so.6)
+1: frame #41: /home/hubutui/.conda/envs/huatuogpt/bin/python() [0x5bbac3]
+1: . This may indicate a possible application crash on rank 0 or a network set up issue.
+1: 
+1: Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+0: E0628 09:34:17.785000 23456247955968 torch/distributed/elastic/multiprocessing/api.py:826] failed (exitcode: 1) local_rank: 0 (pid: 2976896) of binary: /home/hubutui/.conda/envs/huatuogpt/bin/python
+0: I0628 09:34:17.792000 23456247955968 torch/distributed/elastic/multiprocessing/errors/__init__.py:360] ('local_rank %s FAILED with no error file. Decorate your entrypoint fn with @record for traceback info. See: https://pytorch.org/docs/stable/elastic/errors.html', 0)
+0: Traceback (most recent call last):
+0:   File "/home/hubutui/.conda/envs/huatuogpt/bin/torchrun", line 35, in <module>
+0:     sys.exit(load_entry_point('torch==2.3.0', 'console_scripts', 'torchrun')())
+0:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/hubutui/.conda/envs/huatuogpt/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 347, in wrapper
+0:     return f(*args, **kwargs)
+0:            ^^^^^^^^^^^^^^^^^^
+0:   File "/home/hubutui/.conda/envs/huatuogpt/lib/python3.11/site-packages/torch/distributed/run.py", line 879, in main
+0:     run(args)
+0:   File "/home/hubutui/.conda/envs/huatuogpt/lib/python3.11/site-packages/torch/distributed/run.py", line 870, in run
+0:     elastic_launch(
+0:   File "/home/hubutui/.conda/envs/huatuogpt/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 132, in __call__
+0:     return launch_agent(self._config, self._entrypoint, list(args))
+0:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0:   File "/home/hubutui/.conda/envs/huatuogpt/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 263, in launch_agent
+0:     raise ChildFailedError(
+0: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+0: ============================================================
+0: ../main.py FAILED
+0: ------------------------------------------------------------
+0: Failures:
+0:   <NO_OTHER_FAILURES>
+0: ------------------------------------------------------------
+0: Root Cause (first observed failure):
+0: [0]:
+0:   time      : 2024-06-28_09:34:17
+0:   host      : pgpu25.cm.cluster
+0:   rank      : 0 (local_rank: 0)
+0:   exitcode  : 1 (pid: 2976896)
+0:   error_file: <N/A>
+0:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+0: ============================================================
+srun: error: pgpu25: task 0: Exited with exit code 1
+1: W0628 09:34:21.829000 23453254309632 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1252] The node 'pgpu27.cm.cluster_2311306_0' has failed to send a keep-alive heartbeat to the rendezvous '11710' due to an error of type RendezvousConnectionError.
+1: E0628 09:34:22.786000 23456247955968 torch/distributed/elastic/multiprocessing/api.py:826] failed (exitcode: 1) local_rank: 0 (pid: 2311350) of binary: /home/hubutui/.conda/envs/huatuogpt/bin/python
+1: W0628 09:34:22.790000 23456247955968 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1203] The node 'pgpu27.cm.cluster_2311306_0' has failed to shutdown the rendezvous '11710' due to an error of type RendezvousConnectionError.
+1: W0628 09:34:22.795000 23456247955968 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1203] The node 'pgpu27.cm.cluster_2311306_0' has failed to shutdown the rendezvous '11710' due to an error of type RendezvousConnectionError.
+1: W0628 09:34:22.799000 23456247955968 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1203] The node 'pgpu27.cm.cluster_2311306_0' has failed to shutdown the rendezvous '11710' due to an error of type RendezvousConnectionError.
+1: I0628 09:34:22.800000 23456247955968 torch/distributed/elastic/multiprocessing/errors/__init__.py:360] ('local_rank %s FAILED with no error file. Decorate your entrypoint fn with @record for traceback info. See: https://pytorch.org/docs/stable/elastic/errors.html', 1)
+1: Traceback (most recent call last):
+1:   File "/home/hubutui/.conda/envs/huatuogpt/bin/torchrun", line 35, in <module>
+1:     sys.exit(load_entry_point('torch==2.3.0', 'console_scripts', 'torchrun')())
+1:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1:   File "/home/hubutui/.conda/envs/huatuogpt/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 347, in wrapper
+1:     return f(*args, **kwargs)
+1:            ^^^^^^^^^^^^^^^^^^
+1:   File "/home/hubutui/.conda/envs/huatuogpt/lib/python3.11/site-packages/torch/distributed/run.py", line 879, in main
+1:     run(args)
+1:   File "/home/hubutui/.conda/envs/huatuogpt/lib/python3.11/site-packages/torch/distributed/run.py", line 870, in run
+1:     elastic_launch(
+1:   File "/home/hubutui/.conda/envs/huatuogpt/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 132, in __call__
+1:     return launch_agent(self._config, self._entrypoint, list(args))
+1:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1:   File "/home/hubutui/.conda/envs/huatuogpt/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 263, in launch_agent
+1:     raise ChildFailedError(
+1: torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+1: ============================================================
+1: ../main.py FAILED
+1: ------------------------------------------------------------
+1: Failures:
+1:   <NO_OTHER_FAILURES>
+1: ------------------------------------------------------------
+1: Root Cause (first observed failure):
+1: [0]:
+1:   time      : 2024-06-28_09:34:22
+1:   host      : pgpu27.cm.cluster
+1:   rank      : 1 (local_rank: 0)
+1:   exitcode  : 1 (pid: 2311350)
+1:   error_file: <N/A>
+1:   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+1: ============================================================
+srun: error: pgpu27: task 1: Exited with exit code 1
