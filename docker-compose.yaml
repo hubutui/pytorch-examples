@@ -1,0 +1,28 @@
+name: ddp-training
+services:
+  master:
+    image: pytorch/pytorch:2.6.0-cuda12.4-cudnn9-runtime
+    shm_size: "64G"
+    restart: always
+    expose:
+      - ${MASTER_PORT:-29500}
+    volumes:
+      - ./:/workspace/pytorch-examples
+    entrypoint:
+      ["/bin/bash", "/workspace/pytorch-examples/distributed/minGPT-ddp/mingpt/train.sh"]
+    environment:
+      MASTER_ADDR: ${MASTER_ADDR:-localhost}
+      MASTER_PORT: ${MASTER_PORT:-29500}
+      MAX_EPOCHS: 100
+      MAX_NNODES: ${MAX_NNODES:-1}
+      MAX_RESTARTS: ${MAX_RESTARTS:-3}
+      MIN_NNODES: ${MIN_NNODES:-1}
+      NPROC_PER_NODE: ${NPROC_PER_NODE:-1}
+      RDZV_ID: ${RDZV_ID:-mingpt}
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ["0"]
+              capabilities: [gpu]
